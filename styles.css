@@ -1,0 +1,119 @@
+/* Reset styles for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: sans-serif;
+    line-height: 1.7; /* Slightly increased line-height for readability */
+    padding: 15px; /* Slightly reduced padding */
+}
+
+/* Header */
+header {
+    background-color: #120323;
+    color: #97bf04;
+    text-align: left; /* Changed from center to left for a different look */
+    padding: 25px; /* Increased padding for more spacing */
+}
+
+header img {
+    max-width: 90px; /* Slightly smaller logo */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Mobile First Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left instead of center */
+}
+
+.main-content {
+    width: 100%;
+    padding: 15px; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Left-aligned text */
+}
+
+.puffin-img {
+    width: 100%; /* Ensure the image takes full width on mobile */
+    max-width: 100%; /* Constrain image to the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 25px; /* Increased bottom margin for better spacing */
+}
+
+/* Sidebar for mobile */
+.sidebar {
+    width: 100%;
+    background-color: #97bf04;
+    padding: 25px; /* Increased padding */
+    margin-top: 15px; /* Slightly reduced margin */
+    text-align: left; /* Align text to the left */
+}
+
+/* Footer */
+footer {
+    background-color: #d9043d;
+    color: white;
+    text-align: center;
+    padding: 25px; /* Increased padding for more spacing */
+    margin-top: 30px; /* Increased margin */
+}
+
+/* Tablet Layout: 768px and up */
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row; /* Align text and image side by side */
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .puffin-img {
+        width: 55%; /* Image takes up slightly more space */
+        margin-right: 15px; /* Reduced margin-right */
+        margin-bottom: 0;
+    }
+
+    .text-content {
+        width: 45%; /* Text takes the remaining space */
+        padding-left: 10px; /* Reduced padding-left for a tighter look */
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-top: 15px; /* Slightly reduced margin for compactness */
+    }
+}
+
+/* Desktop Layout: 1000px and up */
+@media (min-width: 1000px) {
+    .container {
+        flex-direction: row; /* Sidebar moves to the side */
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px; /* Reduced gap between the sidebar and content */
+    }
+
+    .main-content {
+        width: 75%; /* Main content takes 75% of the space */
+        padding-right: 15px; /* Reduced padding-right */
+    }
+
+    .sidebar {
+        width: 20%; /* Sidebar takes 20% of the space */
+        margin-top: 0;
+    }
+
+    .puffin-img {
+        width: 100%; /* Image takes up full width within the main content */
+        max-width: 450px; /* Slightly smaller max width */
+        height: auto;
+    }
+}
